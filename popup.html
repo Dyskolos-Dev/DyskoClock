@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 500px;
+      padding: 15px;
+    }
+    .setting {
+      margin-bottom: 10px;
+    }
+    select {
+      width: 100%;
+      margin-top: 5px;
+      padding: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="setting">
+    <label>Thème:</label>
+    <select id="theme">
+      <option value="light">Clair</option>
+      <option value="dark">Sombre</option>
+    </select>
+  </div>
+  <div class="setting">
+    <label>Format:</label>
+    <select id="format24h">
+      <option value="true">24h</option>
+      <option value="false">12h</option>
+    </select>
+  </div>
+  <button id="save">Appliquer</button>
+  <script src="background.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', initializePopup);
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Dysko World Clock Overlay",
+  "version": "2.5.0",
+  "description": "Affiche l'heure exacte en superposition sur vos pages web",
+  "icons": {
+    "48": "icons/clock-48.png",
+    "96": "icons/clock-96.png"
+  },
+  "permissions": [
+    "storage",
+    "https://timeapi.io/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/clock-48.png",
+      "96": "icons/clock-96.png"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["background.js"]
+  }]
+}
